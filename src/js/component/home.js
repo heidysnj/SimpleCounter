@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import clockImage from "../../img/clock.jpg";
+import clockImage from "../../img/clock.png";
 
 export function Home() {
 	const [time, setTime] = useState(0);
@@ -50,25 +50,37 @@ export function Home() {
 			<div className="row">
 				<div className="col-2"></div>
 				<div className="col-1 card bg-dark" style={{ width: " 18rem" }}>
-					<img src={clockImage}>/></img>
+					<i className="far fa-clock fa-5x"></i>
 				</div>
 				<div className="col-1 card bg-dark" style={{ width: " 18rem" }}>
-					<h1 style={{ color: "white" }}>{time6}</h1>
+					<h1 className="m-auto" style={{ color: "white" }}>
+						{time6}
+					</h1>
 				</div>
 				<div className="col-1 card bg-dark" style={{ width: " 18rem" }}>
-					<h1 style={{ color: "white" }}>{time5}</h1>
+					<h1 className="m-auto" style={{ color: "white" }}>
+						{time5}
+					</h1>
 				</div>
 				<div className="col-1 card bg-dark" style={{ width: " 18rem" }}>
-					<h1 style={{ color: "white" }}>{time4}</h1>
+					<h1 className="m-auto" style={{ color: "white" }}>
+						{time4}
+					</h1>
 				</div>
 				<div className="col-1 card bg-dark" style={{ width: " 18rem" }}>
-					<h1 style={{ color: "white" }}>{time3}</h1>
+					<h1 className="m-auto" style={{ color: "white" }}>
+						{time3}
+					</h1>
 				</div>
 				<div className="col-1 card bg-dark" style={{ width: " 18rem" }}>
-					<h1 style={{ color: "white" }}>{time2}</h1>
+					<h1 className="m-auto" style={{ color: "white" }}>
+						{time2}
+					</h1>
 				</div>
 				<div className="col-1 card bg-dark" style={{ width: " 18rem" }}>
-					<h1 style={{ color: "white" }}>{time}</h1>
+					<h1 className="m-auto" style={{ color: "white" }}>
+						{time}
+					</h1>
 				</div>
 			</div>
 		</div>
