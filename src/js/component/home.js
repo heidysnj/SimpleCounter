@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import clockImage from "../../img/clock.png";
 
 export function Home() {
 	const [time, setTime] = useState(0);
