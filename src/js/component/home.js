@@ -10,12 +10,21 @@ export function Home() {
 	const [time4, setTime4] = useState(0);
 	const [time5, setTime5] = useState(0);
 	const [time6, setTime6] = useState(0);
+	const [pause, setPause] = useState(true);
 
+	const runCounter = () => {
+		if (pause) {
+			setInterval(() => {
+				setTime(time => time + 1);
+			}, 1000);
+		} else {
+			setTime(time => time);
+		}
+	};
 	useEffect(() => {
-		setInterval(() => {
-			setTime(time => time + 1);
-		}, 1000);
-	}, []);
+		runCounter();
+	}, [pause]);
+
 	if (time === 10) {
 		setTime(0);
 		setTime2(time2 + 1);
@@ -85,8 +94,13 @@ export function Home() {
 					</h1>
 				</div>
 			</div>
-			<div>
-				<StopButton />
+			<div className="mt-5">
+				<button
+					type="button"
+					className="btn btn-outline-secondary"
+					onClick={() => setPause(false)}>
+					Stop
+				</button>
 				<ResumeButton />
 				<ResetButton />
 			</div>

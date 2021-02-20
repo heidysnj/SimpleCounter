@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "bootstrap";
+import Home from "./home";
 
 const StopButton = () => {
 	return (
