@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import StopButton from "./stopButton";
+import ResumeButton from "./resumeButton";
+import ResetButton from "./resetButton";
 
 export function Home() {
 	const [time, setTime] = useState(0);
@@ -81,6 +84,11 @@ export function Home() {
 						{time}
 					</h1>
 				</div>
+			</div>
+			<div>
+				<StopButton />
+				<ResumeButton />
+				<ResetButton />
 			</div>
 		</div>
 	);
